@@ -91,18 +91,6 @@ async function browserifyBuild() {
     transform: babelifyTransform,
   });
   console.log("Bundle ./dist/exceljs.bare.js created.");
-
-  // spec: ./build/spec/browser/exceljs.spec.js -> ./build/web/exceljs.spec.js (no transform)
-  await ensureDir(path.join(ROOT, "./build/web"));
-  await bundleEntry(
-    "./build/spec/browser/exceljs.spec.js",
-    "./build/web/exceljs.spec.js",
-    {
-      transform: null,
-      browserifyOptions: {},
-    },
-  );
-  console.log("Bundle ./build/web/exceljs.spec.js created.");
 }
 
 // 3. Terser: minify with source maps from inline
