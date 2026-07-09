@@ -69,6 +69,14 @@ module.exports = [
         "error",
         { version: ">=10.0.0", ignores: [] },
       ],
+      "n/no-unsupported-features/es-builtins": [
+        "error",
+        { version: ">=10.0.0", ignores: [] },
+      ],
+      "n/no-unsupported-features/node-builtins": [
+        "error",
+        { version: ">=10.0.0", ignores: [] },
+      ],
       "n/no-missing-require": ["error"],
       "object-curly-spacing": ["error", "never"],
       "object-property-newline": [
